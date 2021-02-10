@@ -1,6 +1,6 @@
 import Reat, { Component } from "react";
 import { Navbar, NavbarBrand } from 'reactstrap';
-import Menu from './components/MenuComponent';
+import Menu from './components/MenuComponent1';
 import { DISHES } from './shared/dishes';
 
 class App extends Component {

@@ -13,7 +13,7 @@ export const DISHES =
 				id: 0,
 				rating: 5,
 				comment: "Imagine all the eatables, living in conFusion!",
-				author: "John Lemon",
+				author: "Severus Snape",
 				date: "2012-10-16T17:57:28.556094Z"
             },
             {
@@ -59,7 +59,7 @@ export const DISHES =
 				id: 0,
 				rating: 5,
 				comment: "Imagine all the eatables, living in conFusion!",
-				author: "John Lemon",
+				author: "Albus Dumbledore",
 				date: "2012-10-16T17:57:28.556094Z"
             },
             {
@@ -88,7 +88,7 @@ export const DISHES =
 				rating: 2,
 				comment: "It's your birthday, we're gonna party!",
 				author: "25 Cent",
-				date: "2011-12-02T17:57:28.556094Z"
+				date: "2011-01-02T17:57:28.556094Z"
             }
         ]
     },
@@ -105,7 +105,7 @@ export const DISHES =
 				id: 0,
 				rating: 5,
 				comment: "Imagine all the eatables, living in conFusion!",
-				author: "John Lemon",
+				author: "Jeremy Brett",
 				date: "2012-10-16T17:57:28.556094Z"
             },
             {
@@ -151,8 +151,8 @@ export const DISHES =
 				id: 0,
 				rating: 5,
 				comment: "Imagine all the eatables, living in conFusion!",
-				author: "John Lemon",
-				date: "2012-10-16T17:57:28.556094Z"
+				author: "Basil Rathbone",
+				date: "2012-01-16T17:57:28.556094Z"
             },
             {
 				id: 1,

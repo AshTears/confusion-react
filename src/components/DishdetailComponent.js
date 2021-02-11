@@ -4,6 +4,7 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from "re
 class Dishdetail extends Component {
 
 	getDateString = (date) => {
+		/*
 		let commentDate = new Date(date);
 		let monthsArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", 
 		"Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -11,6 +12,12 @@ class Dishdetail extends Component {
 		let day = commentDate.getDate();
 		let year = commentDate.getFullYear();
 		return month + " " + day + ", " + year;
+		*/
+		return new Intl.DateTimeFormat('en-CA', {
+			year: 'numeric',
+			month: 'short',
+			day: '2-digit'
+		}).format(new Date(Date.parse(date)));
 	}
 	
 	renderDish = (dish) => { 
@@ -26,27 +33,23 @@ class Dishdetail extends Component {
 					</Card>
 				</div>			
 			)
-		}else{
-			return <div></div>;
-		}
+		}else return <div></div>;
 	}
 	
 	renderComments = (dish) => {		
 		if (dish != null){
-			const commentList = (
-				<ul className="list-unstyled">
-					{ dish.comments.map((item) =>				
-						<li key={item.id}>
-							{item.comment}
-							-- {item.author}, {this.getDateString(item.date)}
-						</li>					
-					)}
-				</ul>
+			const commentList = dish.comments.map(item =>
+				<li key={item.id}>
+					<p>{item.comment}</p>
+					<p>-- {item.author}, {this.getDateString(item.date)}</p>
+				</li>				
 			);
 			return (
 				<div className="col-12 col-md-5">
 					<h4>Comments</h4>
-					{commentList}					
+					<ul className="list-unstyled">
+						{commentList}
+					</ul>					
 				</div>
 			);
 		}
@@ -58,9 +61,11 @@ class Dishdetail extends Component {
 		var dish = this.props.dish;
 		
 		return (
-			<div className="row">
-				{this.renderDish(dish)} 
-				{this.renderComments(dish)}
+			<div className="container">
+				<div className="row">
+					{this.renderDish(dish)} 
+					{this.renderComments(dish)}
+				</div>
 			</div>
 		);
 	}

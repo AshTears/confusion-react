@@ -53,8 +53,7 @@ class Dishdetail extends Component {
 				</div>
 			);
 		}
-		else return <div></div>
-		
+		else return <div></div>		
 	}
 	
 	render(){

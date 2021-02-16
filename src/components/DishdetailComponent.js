@@ -1,5 +1,5 @@
-import Reat from "react";
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from "reactstrap";
+import React from "react"
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from "reactstrap"
 
 function GetDateString(date){
 	/*
@@ -15,7 +15,7 @@ function GetDateString(date){
 		year: 'numeric',
 		month: 'short',
 		day: '2-digit'
-	}).format(new Date(Date.parse(date)));
+	}).format(new Date(Date.parse(date)))
 }
 	
 function RenderDish({dish}){ 
@@ -30,7 +30,7 @@ function RenderDish({dish}){
 					</CardBody>
 				</Card>
 			</div>			
-		);
+		)
 	}else return <div></div>;
 }
 	
@@ -47,7 +47,7 @@ function RenderComments({dish}){
 				<h4>Comments</h4>
 				<ul className="list-unstyled">{commentList}</ul>					
 			</div>
-		);
+		)
 	}
 	else return <div></div>		
 }
@@ -60,7 +60,7 @@ const Dishdetail = (props) => {
 				{ RenderComments(props) }
 			</div>
 		</div>
-	);
+	)
 }
 
-export default Dishdetail;
+export default Dishdetail

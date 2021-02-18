@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from "reactstrap"
+import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap"
 
 function GetDateString(date){
 	/*
@@ -34,9 +34,9 @@ function RenderDish({dish}){
 	}else return <div></div>;
 }
 	
-function RenderComments({dish}){		
-	if (dish != null){
-		const commentList = dish.comments.map(item =>
+function RenderComments({comments}){		
+	if (comments != null){
+		const commentList = comments.map(item =>
 			<li key={item.id}>
 				<p>{item.comment}</p>
 				<p>-- {item.author}, {GetDateString(item.date)}</p>

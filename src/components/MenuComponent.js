@@ -1,3 +1,5 @@
+/* @author: Ashika Shallow */
+
 import React from "react"
 import Dishdetail from "./DishdetailComponent"
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from "reactstrap"

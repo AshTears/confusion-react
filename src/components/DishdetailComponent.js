@@ -1,18 +1,11 @@
+/* @author: Ashika Shallow */
+
 import React from "react"
 import { Card, CardImg, CardText, CardBody, CardTitle,
 Breadcrumb, BreadcrumbItem} from "reactstrap"
 import {Link} from "react-router-dom"
 
 function GetDateString(date){
-	/*
-	let commentDate = new Date(date);
-	let monthsArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", 
-		"Aug", "Sep", "Oct", "Nov", "Dec"];
-	let month = monthsArray[commentDate.getMonth()];
-	let day = commentDate.getDate();
-	let year = commentDate.getFullYear();
-	return month + " " + day + ", " + year;
-	*/
 	return new Intl.DateTimeFormat('en-CA', {
 		year: 'numeric',
 		month: 'short',

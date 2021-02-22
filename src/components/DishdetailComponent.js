@@ -23,7 +23,7 @@ function GetDateString(date){
 function RenderDish({dish}){ 
 	if (dish != null){
 		return(
-			<div key={dish.id} className="col-12 col-md-5 m-1">
+			<div key={dish.id}>
 				<Card>
 					<CardImg width="100%" src={dish.image} alt={dish.name} />
 					<CardBody>
@@ -45,7 +45,7 @@ function RenderComments({comments}){
 			</li>				
 		);
 		return (
-			<div className="col-12 col-md-5">
+			<div>
 				<h4>Comments</h4>
 				<ul className="list-unstyled">{commentList}</ul>					
 			</div>

@@ -70,7 +70,7 @@ class CommentForm extends Component{
 	render(){
 		return(
 			<div>
-				<Button outline onClick={this.toggleModal}><span className="fa fa-pencil fa-small">
+				<Button outline onClick={this.toggleModal}><span className="fa fa-pencil fa-lg">
 				</span> Submit Comment</Button>
 				<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
 					<ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
@@ -100,7 +100,7 @@ class CommentForm extends Component{
 							</Row>
 							<Button type="submit" value="submit" color="primary">Submit</Button>
 						</LocalForm>
-					</ModalBody>
+					</ModalBody>					
 				</Modal>
 			</div>
 		)

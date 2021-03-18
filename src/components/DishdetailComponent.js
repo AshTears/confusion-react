@@ -7,6 +7,7 @@ import {Link} from "react-router-dom"
 import {Control, LocalForm, Errors} from 'react-redux-form'
 import { Loading } from './LoadingComponent'
 import { baseUrl } from '../shared/baseUrl'
+import {FadeTransform, Fade, Stagger} from 'react-animation-components'
 
 function GetDateString(date){
 	return new Intl.DateTimeFormat('en-CA', {
@@ -20,6 +21,9 @@ function RenderDish({dish}){
 	if (dish != null){
 		return(
 			<div key={dish.id}>
+				<FadeTransform in transformProps={{
+					exitTransform: 'scale(0.5) translateY(-50%)'
+				}}>
 				<Card>
 					<CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
 					<CardBody>
@@ -27,6 +31,7 @@ function RenderDish({dish}){
 						<CardText>{dish.description}</CardText>
 					</CardBody>
 				</Card>
+				</FadeTransform>
 			</div>			
 		)
 	}else return <div></div>;
@@ -34,11 +39,15 @@ function RenderDish({dish}){
 	
 function RenderComments({comments, postComment, dishId}){		
 	if (comments != null){
-		const commentList = comments.map(item =>
-			<li key={item.id}>
-				<p>{item.comment}</p>
-				<p>-- {item.author}, {GetDateString(item.date)}</p>
-			</li>				
+		const commentList = comments.map(item =>		
+			<Stagger in>
+				<Fade in>
+					<li key={item.id}>
+						<p>{item.comment}</p>
+						<p>-- {item.author}, {GetDateString(item.date)}</p>
+					</li>
+				</Fade>
+			</Stagger>							
 		);
 		return (
 			<div>

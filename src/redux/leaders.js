@@ -1,3 +1,5 @@
+/* @author Ashika Shallow */
+
 import * as ActionTypes from './ActionTypes';
 
 export const Leaders = (state = {

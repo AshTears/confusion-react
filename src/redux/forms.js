@@ -1,3 +1,5 @@
+/* @author Ashika Shallow */
+
 export const InitialFeedback = {
 	firstname: '',
 	lastname: '',
